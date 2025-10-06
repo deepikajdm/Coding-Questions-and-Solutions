@@ -3,6 +3,17 @@
 Welcome to my collection of **coding questions and solutions**!  
 This repository is designed to track my learning progress and help others prepare for **technical interviews**, focusing on **Java**, **Python**, and **Data Structures & Algorithms (DSA)**.
 
+About Me
+👩‍💻 Deepika J
+
+B.E. in Computer Science | MBA 
+
+Skills: C, Java, Python, Frontend Development, Data Science, Project Management
+
+Interests: Software Engineering | Data Analysis | AI | Project Coordination
+
+🌐 Follow my journey in coding and continuous learning!
+
 ## 🧩 Topics Covered
 - 🧠 **Arrays**
 - 🔤 **Strings**
@@ -50,8 +61,4 @@ public class ReverseArray {
 }
 
 
----
-
-Would you like me to also create a **sample folder with 3 coding questions and solutions** (in Java + Python) so you can directly upload them as your first commit?  
-I can make the exact files and code examples for you.
 
