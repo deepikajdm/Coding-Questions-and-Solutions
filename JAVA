@@ -1,0 +1,68 @@
+### **1️⃣ Arrays → Two Sum**
+**Problem 1:**  
+Find two numbers that add up to a target.
+
+**Java**
+
+import java.util.*;
+public class two_sum {
+    public static int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement))
+                return new int[]{map.get(complement), i};
+            map.put(nums[i], i);
+        }
+        return new int[]{};
+    }
+    public static void main(String[] args) {
+        int[] res = twoSum(new int[]{2,7,11,15}, 9);
+        System.out.println(Arrays.toString(res));
+    }
+}
+
+**Problem 2:**
+Longest Substring Without Repeating Characters
+
+**Java**
+
+import java.util.*;
+class longest_substring {
+    public static int lengthOfLongestSubstring(String s) {
+        HashSet<Character> set = new HashSet<>();
+        int left = 0, max = 0;
+        for (int right = 0; right < s.length(); right++) {
+            while (set.contains(s.charAt(right)))
+                set.remove(s.charAt(left++));
+            set.add(s.charAt(right));
+            max = Math.max(max, right - left + 1);
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+    }
+}
+
+**Problem 3:**
+Recursion → All Permutations of a String
+
+**java**
+
+class permutations {
+    static void permute(String s, String ans) {
+        if (s.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            String rest = s.substring(0, i) + s.substring(i + 1);
+            permute(rest, ans + ch);
+        }
+    }
+    public static void main(String[] args) {
+        permute("ABC", "");
+    }
+}
