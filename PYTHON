@@ -1,1 +1,51 @@
+**Problem 1:**  
+Find two numbers that add up to a target.
+
+**Python**
+
+def two_sum(nums, target):
+    lookup = {}
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in lookup:
+            return [lookup[diff], i]
+        lookup[n] = i
+    return []
+
+print(two_sum([2,7,11,15], 9))
+
+**Problem 2:**
+Strings → Longest Substring Without Repeating Characters
+
+**Python**
+
+def longest_substring(s):
+    seen = set()
+    l = 0
+    res = 0
+    for r in range(len(s)):
+        while s[r] in seen:
+            seen.remove(s[l])
+            l += 1
+        seen.add(s[r])
+        res = max(res, r - l + 1)
+    return res
+
+print(longest_substring("abcabcbb"))
+
+**problem 3:**
+Recursion → All Permutations of a String
+
+**Python**
+
+def permute(s, ans=""):
+    if not s:
+        print(ans)
+        return
+    for i in range(len(s)):
+        permute(s[:i] + s[i+1:], ans + s[i])
+
+permute("ABC")
+
+
 
